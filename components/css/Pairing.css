@@ -1,0 +1,125 @@
+.pairing-section {
+  background: var(--paper);
+}
+
+.pairing-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.92fr;
+  align-items: center;
+  gap: clamp(55px, 9vw, 115px);
+}
+
+.pairing-image {
+  position: relative;
+  margin: 0;
+}
+
+.pairing-image img {
+  width: 100%;
+  height: 445px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.pairing-image figcaption {
+  position: absolute;
+  right: -22px;
+  bottom: 22px;
+  padding: 12px 18px;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.pairing-copy > p:not(.section-label, .pairing-note) {
+  max-width: 440px;
+  margin: 23px 0 25px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.pairing-copy h2 {
+  margin-bottom: 0;
+  font-size: clamp(35px, 4vw, 51px);
+  font-weight: 600;
+  letter-spacing: -2.6px;
+  line-height: 1.1;
+}
+
+.pairing-roles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding: 22px 0 19px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.pairing-roles > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.role-number {
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e6eef4;
+  color: var(--blue-dark);
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.pairing-roles p {
+  margin: 1px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.pairing-roles strong {
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.pairing-note {
+  margin: 15px 0 0;
+  color: var(--blue-dark);
+  font-family: var(--serif);
+  font-size: 16px;
+  font-style: italic;
+}
+
+@media (max-width: 680px) {
+  .pairing-grid {
+    grid-template-columns: 1fr;
+    gap: 39px;
+  }
+
+  .pairing-image img {
+    height: 300px;
+  }
+
+  .pairing-image figcaption {
+    right: -7px;
+    bottom: 12px;
+  }
+
+  .pairing-copy h2 {
+    font-size: clamp(35px, 10vw, 47px);
+    letter-spacing: -2px;
+  }
+
+  .pairing-roles {
+    gap: 12px;
+  }
+}

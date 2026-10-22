@@ -1,0 +1,132 @@
+.season-section {
+  background: #e8eff4;
+}
+
+.season-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 11%;
+}
+
+.season-heading h2 {
+  margin-bottom: 0;
+  font-size: clamp(35px, 4vw, 51px);
+  font-weight: 600;
+  letter-spacing: -2.6px;
+  line-height: 1.1;
+}
+
+.season-heading > p:not(.section-label) {
+  max-width: 370px;
+  margin: 22px 0 24px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--blue-dark);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  color: var(--amber);
+}
+
+.season-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid #c8d6e1;
+}
+
+.season-item {
+  min-height: 79px;
+  display: grid;
+  grid-template-columns: 62px 1fr auto;
+  align-items: center;
+  gap: 13px;
+  border-bottom: 1px solid #c8d6e1;
+}
+
+.season-count {
+  color: #718698;
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+.season-item h3 {
+  margin: 0 0 2px;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.season-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.season-tag {
+  padding: 5px 9px;
+  border: 1px solid #c2d2df;
+  border-radius: 99px;
+  color: #5f7383;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+.season-item-featured .season-count,
+.season-item-featured .season-tag {
+  color: var(--blue-dark);
+}
+
+.season-item-featured .season-tag {
+  border-color: #a9c4d4;
+  background: #f2f6f8;
+}
+
+@media (max-width: 900px) {
+  .season-layout {
+    gap: 7%;
+  }
+}
+
+@media (max-width: 680px) {
+  .season-layout {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .season-heading h2 {
+    font-size: clamp(35px, 10vw, 47px);
+    letter-spacing: -2px;
+  }
+
+  .season-item {
+    grid-template-columns: 44px 1fr auto;
+    gap: 8px;
+  }
+
+  .season-item h3 {
+    font-size: 15px;
+  }
+
+  .season-item p {
+    font-size: 11px;
+  }
+
+  .season-tag {
+    padding: 4px 6px;
+    font-size: 8px;
+  }
+}
